@@ -1,0 +1,2 @@
+IDENTIFIER]CREATOR]TITLE]PUBLISHER]TIME_COVERAGE]TYPE]LANGUAGE]FORMAT]NUMBER_OF_RECORDS]RIGHTS]DESCRIPTION]SUBJECT]GEOGRAPHICAL_COVERAGE]LANDING_PAGE
+MetadataTest]Dominic Banks]A Test of the Doi-Bulk-Minter]Software Engineering Group]2019]Software]en].py]1]Open Rights]This some test data for checking if the Doi-Bulk-Minter works correctly]Generating DOI]Oxfordshire]https://stfc.ukri.org/

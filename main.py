@@ -12,20 +12,20 @@ csv = "doi_input_datasets.txt"
 # Define the address of the DOI site
 doisite = "https://doi-test.stfc.ac.uk/metadata"
 
+# 'columns' is used to store a lookup of the Dataframe's field names
 columns = ['IDENTIFIER', 'CREATOR', 'TITLE', 'PUBLISHER', 'TIME_COVERAGE', 'TYPE', 'LANGUAGE', 'FORMAT',
            'NUMBER_OF_RECORDS', 'RIGHTS', 'DESCRIPTION', 'SUBJECT', 'GEOGRAPHICAL_COVERAGE', 'LANDING_PAGE']
+# values is used to hold the information pulled from the dataframe while any needed data manipulation happens
 values = ['IDENTIFIER', 'CREATOR', 'TITLE', 'PUBLISHER', 'TIME_COVERAGE', 'TYPE', 'LANGUAGE', 'FORMAT',
           'NUMBER_OF_RECORDS', 'RIGHTS', 'DESCRIPTION', 'SUBJECT', 'GEOGRAPHICAL_COVERAGE', 'LANDING_PAGE', 'DOI']
 
+# Split the CSV into a Pandas Dataframe so we can pull information from it easily
 df = pd.read_csv(csv, sep=']')
-
+# Get the dimensions of the Dataframe so we know how many rows it contains
 rc = df.shape[0]
-i = 0
-c = 0
 
 
 # Pull the requested row of data from the CSV file and stores it in the 'values' list
-
 def fetch_values(rowindex: int):
     inc = 0
     while inc < len(columns):
@@ -33,6 +33,7 @@ def fetch_values(rowindex: int):
         inc += 1
 
 
+# Fillout the xml template file with the data provided in 'doivalues'
 def filloutxml(doivalues: list):
     metadata = xmltemplate.replace("doiIDENTIFIER", str(doivalues[0]))
     metadata = metadata.replace("doiCREATOR", str(doivalues[1]))
@@ -51,6 +52,7 @@ def filloutxml(doivalues: list):
     return metadata
 
 
+# Saves the xml document using a unique name
 def savexmlfile(filledmetadata: str):
     filename = str(values[0]) + " generated metadata.xml"
     filesave = open(filename, 'w+')
@@ -61,3 +63,7 @@ def savexmlfile(filledmetadata: str):
 
 def selectdate(doiDATE: str):
     matches = datefinder.find_dates(doiDATE)
+
+
+fetch_values(0)
+savexmlfile(filloutxml(values))

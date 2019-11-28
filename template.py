@@ -15,7 +15,7 @@ xmltemplate = """<?xml version="1.0" encoding="UTF-8"?>
     <subject xml:lang="en">doiSUBJECT</subject>
   </subjects>
   <language>doiLANGUAGE</language>
-  <resource TyperesourceTypeGeneral="Dataset">doiTYPE</resourceType>
+  <resource TyperesourceTypeGeneral="Dataset">doiTYPE</resource>
   <sizes>
     <size>doiNUMBER_OF_RECORDS</size>
   </sizes>
