@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">MetadataTest</identifier>
+  <creators>
+    <creator>
+      <creatorName>Dominic Banks</creatorName>
+    </creator>
+  </creators>
+  <titles>
+    <title xml:lang="en">A Test of the Doi-Bulk-Minter</title>
+  </titles>
+  <publisher xml:lang="en">Software Engineering Group</publisher>
+  <publicationYear>2019</publicationYear>
+  <subjects>
+    <subject xml:lang="en">Generating DOI</subject>
+  </subjects>
+  <language>en</language>
+  <resource TyperesourceTypeGeneral="Dataset">Software</resource>
+  <sizes>
+    <size>1</size>
+  </sizes>
+  <formats>
+    <format>.py</format>
+  </formats>
+  <rightsList>
+    <rights xml:lang="en-US">Open Rights</rights></rightsList>
+  <descriptions>
+    <description xml:lang="en" descriptionType="Abstract">This some test data for checking if the Doi-Bulk-Minter works correctly</description>
+  </descriptions>
+  <geoLocations>
+    <geoLocation>
+      <geoLocationPlace>Oxfordshire</geoLocationPlace>
+    </geoLocation>
+  </geoLocations>
+</resource>
